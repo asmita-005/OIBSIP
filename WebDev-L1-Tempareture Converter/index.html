@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Converter</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="converter-card">
+
+            <div class="header">
+                <div class="temperature-icon">🌡️</div>
+                <h1>Temperature Converter</h1>
+                <p>Convert temperatures between Celsius, Fahrenheit and Kelvin</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-group">
+
+                <label for="temperature">
+                    Enter Temperature
+                </label>
+
+                <input 
+                    type="number"
+                    id="temperature"
+                    placeholder="Enter a temperature"
+                    step="any"
+                >
+
+            </div>
+
+            <!-- Unit Selection -->
+            <div class="input-group">
+
+                <label for="inputUnit">
+                    Select Input Unit
+                </label>
+
+                <select id="inputUnit">
+                    <option value="celsius">Celsius (°C)</option>
+                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select>
+
+            </div>
+
+            <!-- Convert Button -->
+            <button id="convertBtn">
+                Convert Temperature
+            </button>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="error-message"></p>
+
+            <!-- Results -->
+            <div id="resultBox" class="result-box">
+
+                <h2>Conversion Results</h2>
+
+                <div class="result-item">
+                    <span>Celsius</span>
+                    <strong id="celsiusResult">-- °C</strong>
+                </div>
+
+                <div class="result-item">
+                    <span>Fahrenheit</span>
+                    <strong id="fahrenheitResult">-- °F</strong>
+                </div>
+
+                <div class="result-item">
+                    <span>Kelvin</span>
+                    <strong id="kelvinResult">-- K</strong>
+                </div>
+
+            </div>
+
+            <button id="clearBtn" class="clear-btn">
+                Clear
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
